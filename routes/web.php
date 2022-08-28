@@ -18,3 +18,11 @@ Route::get('/', function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::get('test', function(){
+
+return csrf_token();
+    // return Response::json([
+    //     'csrf' => csrf_token()
+    // ], 200);
+});
