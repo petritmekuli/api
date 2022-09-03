@@ -74,7 +74,7 @@ class PostController extends Controller
     */
     public function update(Request $request, Post $post)
     {
-        $this->authorize('update-post', $post);
+        // $this->authorize('update-post', $post);
         //* Athother way to do so:
         // Gate::authorize('update', $post);
 
@@ -101,7 +101,7 @@ class PostController extends Controller
     */
     public function destroy(Request $request, Post $post)
     {
-        $this->authorize('delete-post', $post);
+        // $this->authorize('delete-post', $post);
 
         $post->delete();
 
